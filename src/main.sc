@@ -10,6 +10,10 @@ theme: /
             q: melon
             a: Перед тобой три коридора, в какой войдешь? 
             
+            state: Left
+                q: * *лев* *
+                a: Съел дракон
+            
         state: NoMelon
             event: noMatch
             a: На эльфийском
