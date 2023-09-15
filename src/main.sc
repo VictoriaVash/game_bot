@@ -17,7 +17,7 @@ theme: /
             
             state: Right
                 q: * *прав* *
-                a: 
+                a: +++
                 
                 
             state: Strait
