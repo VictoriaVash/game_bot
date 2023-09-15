@@ -7,6 +7,6 @@ theme: /
         a: Молви, друг, и войди.
         
     state: NoMatch
-        event!: NoMatch
+        event!: noMatch
         a: Перефразируйте текст, ничего не понятно.
 
