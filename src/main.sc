@@ -13,10 +13,12 @@ theme: /
             
             state: Left
                 q: * *лев* *
-                a: Съел дракон
+                a: Съел дракон. Начать заново?
                 
                 state: InStart
+                    q: Да
                     go: /Start
+                    
             
             state: Right
                 q: направо
