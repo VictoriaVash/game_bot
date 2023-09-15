@@ -1,4 +1,5 @@
 require: slotfilling/slotFilling.sc
+require: functions.js
   module = sys.zb-common
 theme: /
 
@@ -25,7 +26,7 @@ theme: /
                 
                 state: Open
                 q: * (~сломать|~вскрыть|~открыть) *
-                a: Вам выпали монеты, ровно монеты
+                a: Вам выпали монеты, ровно * {{getRandomInt}} * монеты
             
             
         state: NoMelon
