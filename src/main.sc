@@ -31,23 +31,21 @@ theme: /
                         $session.number = getRandomInt(250)
                     q: * (~сломать|~открывать|~вскрывать) *
                     a: Вам выпали монеты, ровно  {{$session.number}} монеты
-                    
-                    script:
-                        $reactions.transition("/ПотратитьМонеты");
+                    go!: Open/ПотратитьМонеты
 
                     
                     
-        state: ПотратитьМонеты
-            intent: /Число
-            script:
-                var num = $parseTree._Number;
-                if (num == $session.number) {
-                        $reactions.answer("Монет не осталось");
-                }
-                else
-                    if (num < $session.number)
-                        $reactions.answer(selectRandomArg("Можешь потратить еще"));
-                    else $reactions.answer(selectRandomArg("Монет не осталось"));
+                    state: ПотратитьМонеты
+                        intent: /Число
+                        script:
+                            var num = $parseTree._Number;
+                            if (num == $session.number) {
+                                    $reactions.answer("Монет не осталось");
+                            }
+                            else
+                                if (num < $session.number)
+                                    $reactions.answer(selectRandomArg("Можешь потратить еще"));
+                                else $reactions.answer(selectRandomArg("Монет не осталось"));
 
                         
             
