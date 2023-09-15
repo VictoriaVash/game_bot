@@ -28,7 +28,7 @@ theme: /
                 
                 state: Open
                     script:
-                        $session.number = {{getRandomInt(250)}}
+                        $session.number = getRandomInt(250)
                     q: * (~сломать|~открывать|~вскрывать) *
                     a: Вам выпали монеты, ровно  {{$session.number}} монеты
                     
