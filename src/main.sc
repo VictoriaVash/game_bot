@@ -27,14 +27,20 @@ theme: /
                 a: Перед вами сундук, что будете делать?
                 
                 state: Open
+                    script:
+                        $session.number = {{getRandomInt(250)}}
                     q: * (~сломать|~открывать|~вскрывать) *
-                    a: Вам выпали монеты, ровно  {{getRandomInt(250)}} монеты
+                    a: Вам выпали монеты, ровно  {{$session.number}} монеты
+                    
+                    state: GetNumber
+                        script:
+                            $session.number = $jsapi.random(100) + 1
+                        go!: /Confirm
                     
                     state: ПотратитьМонеты
                         intent: /Число
                         script:
-            
-                            var num = 1;
+                            var num = $parseTree._Number;;
             
             
         state: NoMelon
