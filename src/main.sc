@@ -26,7 +26,7 @@ theme: /
                 
                 state: Open
                 q: * (~сломать|~вскрыть|~открыть) *
-                a: Вам выпали монеты, ровно * {{getRandomInt}} * монеты
+                a: Вам выпали монеты, ровно  {{getRandomInt(5)}} монеты
             
             
         state: NoMelon
