@@ -16,8 +16,8 @@ theme: /
                 a: Съел дракон
             
             state: Right
-                q: * *прав* *
-                a: +++
+                q: направо
+                a: Надо подумать
                 
                 
             state: Strait
