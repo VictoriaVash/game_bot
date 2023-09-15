@@ -29,6 +29,12 @@ theme: /
                 state: Open
                     q: * (~сломать|~открывать|~вскрывать) *
                     a: Вам выпали монеты, ровно  {{getRandomInt(250)}} монеты
+                    
+                    state: ПотратитьМонеты
+                        intent: /Число
+                        script:
+            
+                            var num = 1;
             
             
         state: NoMelon
