@@ -9,6 +9,10 @@ theme: /
         state: Melon
             q: melon
             a: Перед тобой три коридора, в какой войдешь? 
+            
+        state: NoMelon
+            event: noMatch
+            a: На эльфийском
         
     state: NoMatch
         event!: noMatch
