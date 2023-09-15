@@ -37,17 +37,17 @@ theme: /
 
                     
                     
-                    state: ПотратитьМонеты
-                        intent: /Число
-                        script:
-                            var num = $parseTree._Number;
-                            if (num == $session.number) {
-                                $reactions.answer("Монет не осталось");
-                            }
-                            else
-                                if (num < $session.number)
-                                    $reactions.answer(selectRandomArg("Можешь потратить еще"));
-                                else $reactions.answer(selectRandomArg("Монет не осталось"));
+                state: ПотратитьМонеты
+                    intent: /Число
+                    script:
+                        var num = $parseTree._Number;
+                        if (num == $session.number) {
+                            $reactions.answer("Монет не осталось");
+                        }
+                        else
+                            if (num < $session.number)
+                                $reactions.answer(selectRandomArg("Можешь потратить еще"));
+                            else $reactions.answer(selectRandomArg("Монет не осталось"));
 
                         
             
