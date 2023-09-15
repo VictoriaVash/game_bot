@@ -14,8 +14,7 @@ theme: /
             state: Left
                 q: * *лев* *
                 a: Съел дракон
-                
-                    go: /Start
+                go: /Start
             
             state: Right
                 q: направо
